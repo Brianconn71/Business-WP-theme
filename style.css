@@ -1,7 +1,6 @@
 /* Theme Name: Subh Digital: Brian Connolly Description: Basic site set up */
-body {
-    background-color: red;
-}
-.poo {
-    color: blueviolet;
+.subh-logo{
+    height: 150px;
+    width: 200px;
+    max-height: 8rem;
 }

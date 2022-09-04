@@ -1,43 +1,24 @@
 <!DOCTYPE html>
 <html>
-<!-- <head>
-<title><?php bloginfo('title'); ?></title>
-<style>
-  <?php include "style.css" ?>
-</style>
-</head>
-<body>
-<h1><?php bloginfo('title'); ?></h1>
-<h3><?php bloginfo('description'); ?></h3>
-<?php while (have_posts()) {
-the_post();
-?>
-<h5><?php the_date(); ?></h5>
-<h2>
-<a href="index.php?p=<?php the_ID(); ?>">
-<?php the_title(); ?>
-</a>
-</h2>
-<p><?php the_content(); ?></p>
-<hr/>
-<?php } ?> -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hook</title>
+    <title>Subh Digital</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+    <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico">
 </head>
 
 <body class="bg-black muli">
     <nav class="w-100pc flex flex-column md-flex-row md-px-10 py-5 bg-black">
         <div class="flex justify-between">
             <a href="#" class="flex items-center p-2 mr-4 no-underline">
-                <img class="max-h-l2 w-auto" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-3.jpg" />
+                <img class="subh-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/Subh_Digital_Logo.png" />
             </a>
             <a data-toggle="toggle-nav" data-target="#nav-items" href="#"
                 class="flex items-center ml-auto md-hidden indigo-lighter opacity-50 hover-opacity-100 ease-300 p-1 m-3">
@@ -46,10 +27,9 @@ the_post();
         </div>
         <div id="nav-items" class="hidden flex sm-w-100pc flex-column md-flex md-flex-row md-justify-end items-center">
             <a href="#home" class="fs-s1 mx-3 py-3 indigo no-underline hover-underline">Home</a>
-            <a href="#features" class="fs-s1 mx-3 py-3 indigo no-underline hover-underline">Features</a>
+            <a href="#features" class="fs-s1 mx-3 py-3 indigo no-underline hover-underline">What we do</a>
             <a href="#pricing" class="fs-s1 mx-3 py-3 indigo no-underline hover-underline">Pricing</a>
-            <a href="#blog" class="fs-s1 mx-3 py-3 indigo no-underline hover-underline">Blog</a>
-            <a href="#" class="button bg-white black fw-600 no-underline mx-5">Register</a>
+            <a href="#contact" class="fs-s1 mx-3 py-3 indigo no-underline hover-underline">Contact Us</a>
         </div>
     </nav>
 
@@ -382,7 +362,7 @@ the_post();
     </section>
 
     <!-- blog -->
-    <section class="p-0 md-p-5">
+    <section class="p-0 md-p-5" id="contact">
         <div class="flex flex-wrap">
             <div class="w-100pc md-w-33pc p-10">
                 <a href="#" class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
